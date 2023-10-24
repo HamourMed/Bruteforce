@@ -34,7 +34,7 @@ def bruteforce(s : requests.Session) -> str :
                 num, remainder = divmod(num, base)
                 password = charset[remainder] + password
             print(password)
-            if(check_password(s,password)) :
+            if(check_password(s,password)):
                 return password
         length+=1
 
