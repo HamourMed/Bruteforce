@@ -23,7 +23,7 @@ def check_password(s : requests.Session, password : str) -> bool:
 
 
 def bruteforce(s : requests.Session) -> str :
-    charset = ''.join(chr(i) for i in range(97, 108))  # ASCII from space to ~ [32 .. 127]  ## in case of tests set interval of chars between [a..o] 97 .. 112
+    charset = ''.join(chr(i) for i in range(32, 127))  # ASCII from space to ~ [32 .. 127]  ## in case of tests set interval of chars between [a..o] 97 .. 112
     base = len(charset)
     length=1
     while True :
